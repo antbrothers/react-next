@@ -2,7 +2,7 @@
  * @Author: jianxi_lin 
  * @Date: 2018-05-24 16:49:22 
  * @Last Modified by: jianxi_lin
- * @Last Modified time: 2018-05-24 17:53:23
+ * @Last Modified time: 2018-05-24 17:57:51
  */
 import React from 'react'
 import { initStore }  from '../redux/store'
@@ -17,7 +17,7 @@ class Home extends React.Component {
     static async getInitialProps({pathname, query, req, xhr}) {
         const res = await fetch('http://114.67.143.209:3002/api/getRed')
         const data = await res.json()
-        console.log(`show data fetched . Count : ${data.length}`)
+        console.log(`show data fetched . Count : ${data.data.hot.length}`)
         return {
             shows: data
         }
