@@ -2,7 +2,7 @@
  * @Author: jianxi_lin 
  * @Date: 2018-05-24 16:49:22 
  * @Last Modified by: jianxi_lin
- * @Last Modified time: 2018-05-24 17:34:34
+ * @Last Modified time: 2018-05-24 17:53:23
  */
 import React from 'react'
 import { initStore }  from '../redux/store'
@@ -11,8 +11,17 @@ import Layout from "../layout/BasicLayout";
 import About from './about'
 import Head from 'next/head'
 import { red } from '../redux/actions/red'
+import fetch from "isomorphic-unfetch";
 
 class Home extends React.Component {
+    static async getInitialProps({pathname, query, req, xhr}) {
+        const res = await fetch('http://114.67.143.209:3002/api/getRed')
+        const data = await res.json()
+        console.log(`show data fetched . Count : ${data.length}`)
+        return {
+            shows: data
+        }
+    }
     componentDidMount() {
 
     }
@@ -51,8 +60,7 @@ class Home extends React.Component {
     }
 }
 
- const mapStateToProps = (state) => {
-     console.log(state)
+ const mapStateToProps = (state) => {   
     return {
         getRedState: state.red,
     }
