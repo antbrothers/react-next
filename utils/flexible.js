@@ -4,7 +4,7 @@ export default (win, doc) => {
     function setRemUnit () {
         var docWidth = docEl.clientWidth;
         var rem = docWidth / 10;
-        docEl.style.fontSize = rem + 'px';
+        docEl.style.fontSize = 100 + 'px';
     }
 
     win.addEventListener('resize', function () {

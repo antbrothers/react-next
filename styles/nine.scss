@@ -1,0 +1,21 @@
+.nine-main {
+    .icon-wrapper {
+        height: 3.6rem;       
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    .icon-list .icon {
+        display: inline-block;
+        box-sizing: border-box;
+        width: 20%;
+        text-align: center;
+    }
+    .icon-list .icon-desc {
+        text-align: center;
+        font-size: .24rem;
+        color: #666;
+    }
+}

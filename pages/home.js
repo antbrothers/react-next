@@ -2,31 +2,27 @@
  * @Author: jianxi_lin 
  * @Date: 2018-05-24 16:49:22 
  * @Last Modified by: jianxi_lin
- * @Last Modified time: 2018-05-24 17:57:51
+ * @Last Modified time: 2018-05-25 17:27:11
  */
 import React from 'react'
 import { initStore }  from '../redux/store'
 import withRedux from 'next-redux-wrapper'
 import Layout from "../layout/BasicLayout";
-import About from './about'
-import Head from 'next/head'
+import Banner from '../components/banner'
+import Header from "../components/header";
+import Nine from "../components/nine"
 import { red } from '../redux/actions/red'
 import fetch from "isomorphic-unfetch";
 
 class Home extends React.Component {
-    static async getInitialProps({pathname, query, req, xhr}) {
+    // 异步服务端渲染数据
+    static async getInitialProps({pathname, query, req, xhr}) {                
         const res = await fetch('http://114.67.143.209:3002/api/getRed')
         const data = await res.json()
         console.log(`show data fetched . Count : ${data.data.hot.length}`)
         return {
             shows: data
         }
-    }
-    componentDidMount() {
-
-    }
-    componentWillMount() {
-
     }
     cows() {
         var html = ''
@@ -45,11 +41,9 @@ class Home extends React.Component {
           }.bind(this);
         return (
             <Layout title={`图书商城`}>
-                <Head>
-                    <link rel="stylesheet" href="/_next/static/style.css" />
-                </Head>
-                <About>                    
-                </About>
+                <Header></Header>     
+                <Banner></Banner>  
+                <Nine></Nine>  
                 <div className="btn" onClick={() => this.props.getRed()}>领取</div>
                 <table>
                     <tbody dangerouslySetInnerHTML={createMarkup()}>
