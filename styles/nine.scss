@@ -1,6 +1,15 @@
 .nine-main {
     .icon-wrapper {
-        height: 3.6rem;       
+        height: 3.8rem;   
+        position: relative;   
+        border-top: 1px solid #DDD8CE; 
+        border-bottom: 1px solid #DDD8CE; 
+    }
+    dl{
+        margin: 0;
+    }
+    dd {
+        margin: 0;
     }
     ul {
         margin: 0;
@@ -17,5 +26,27 @@
         text-align: center;
         font-size: .24rem;
         color: #666;
+        margin-top: -18px;
+    }
+    .a_img {
+        width: 60px;
+        height: 60px;
+    }
+    .list-ico {
+        position: absolute;
+        bottom: .22rem;
+        text-align: center;
+        width: 100%;
+        li {
+            display: inline-block;
+            width: .16rem;
+            height: .16rem;
+            border-radius: 50%;
+            background-color: #F0EFED;
+            margin: 0 .15rem;
+        }
+        li.active {
+            background-color: #06c1ae;
+        }
     }
 }
