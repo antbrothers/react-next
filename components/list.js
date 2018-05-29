@@ -2,17 +2,12 @@
  * @Author: jianxi_lin 
  * @Date: 2018-05-28 16:19:52 
  * @Last Modified by: jianxi_lin
- * @Last Modified time: 2018-05-28 17:31:44
+ * @Last Modified time: 2018-05-29 17:34:51
  */
 import Link from "next/link";
 import Head from 'next/head'
-import '../styles/list.scss'
-
 const List = () => (
-    <div id="list-main">
-        <Head>
-            <link rel="stylesheet" href="/_next/static/list.css" />
-        </Head>
+    <div id="list-main">        
         <div id="guessLike" className="guess-like">
             <dl className="list">
                 <dd>
@@ -96,6 +91,9 @@ const List = () => (
                 </dd>
             </dl>
         </div>
+        <style jsx>
+            {`@import 'styles/list.scss';`}
+        </style>
     </div>
 )
 

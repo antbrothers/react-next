@@ -6,15 +6,15 @@ const LURCache = require('lru-cache')
 
 const port = parseInt(process.env.PORT, 10) || 3005
 
-const dev = process.env.NODE_ENV  !== 'production'
-const app = next({dev})
+const dev = process.env.NODE_ENV !== 'production'
+const app = next({ dev })
 const handle = app.getRequestHandler()
 
 
 // 缓存设置
 const ssrCache = new LURCache({
     max: 100,
-    maxAge: 1000*60*60 // 1 hour
+    maxAge: 1000 * 60 * 60 // 1 hour
 })
 
 
@@ -33,7 +33,7 @@ app.prepare().then(() => {
         const queryParams = {
             title: req.params.id
         }
-        app.render(req, res, actualPage, queryParams)    
+        app.render(req, res, actualPage, queryParams)
     })
     server.get('*', (req, res) => {
         return handle(req, res)
@@ -47,7 +47,7 @@ app.prepare().then(() => {
     process.exit(1)
 })
 
-function getCacheKey (req) {
+function getCacheKey(req) {
     return `${req.url}`
 }
 function renderAndCache(req, res, pagePath, queryParams) {

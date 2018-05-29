@@ -1,12 +1,8 @@
 import Link from "next/link";
 import Head from 'next/head'
-import '../styles/category.scss'
 
 const Category = () => (
-    <div id="category">
-         <Head>
-            <link rel="stylesheet" href="/_next/static/category.css" />
-        </Head>
+    <div id="category">        
         <dl className="list" id="daogou">
             <dd className="dd-padding">
                 <a className="react" href="//i.meituan.com/firework/guide" gaevent="imt/homepage/homeguide1" rel="nofollow">
@@ -38,6 +34,11 @@ const Category = () => (
                 </a>
             </dd>
         </dl>
+        <style jsx>
+            {`
+              @import 'styles/category.scss';
+            `}
+        </style>
     </div>
 )
 export default Category

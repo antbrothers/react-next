@@ -1,11 +1,8 @@
 import Link from "next/link";
 import Head from 'next/head'
-import '../styles/nine.scss'
+
 const Nine = () => (
-    <div>
-        <Head>
-            <link rel="stylesheet" href="/_next/static/nine.css" />
-        </Head>
+    <div>        
         <div className="nine-main">
             <dl className="list list-in">
                 <dd className="icon-wrapper h_gesture_">
@@ -78,6 +75,9 @@ const Nine = () => (
                 </dd>
             </dl>
         </div>
+        <style jsx>
+            {`@import 'styles/nine.scss';`}
+        </style>
     </div>
 
 )

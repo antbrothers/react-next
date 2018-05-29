@@ -3,6 +3,7 @@ const withSass = require('@zeit/next-sass')
 const withCSS = require('@zeit/next-css')
 const withSourceMaps = require('@zeit/next-source-maps')
 
+console.log(process.env.BUNDLE_ANALYZE)
 const isAnalyze = process.env.BUNDLE_ANALYZE === 'both'
 if(isAnalyze) {
     module.exports = withBundleAnalyzer({

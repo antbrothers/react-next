@@ -13,10 +13,10 @@ export default class BasicLayout extends React.Component {
                 <Head>
                     <title>{title}</title>
                     <meta charSet='utf-8' />
-                    <meta name="viewport" content="initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, width=device-width, user-scalable=no"/>
+                    <meta name="viewport" content="initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, width=device-width, user-scalable=no" />                   
                 </Head>
                 {children}
             </div>
         )
-    }    
+    }
 }

@@ -1,11 +1,8 @@
 import Link from "next/link";
 import Head from 'next/head'
-import '../styles/header.scss'
+
 const Header = () => (
-    <div>
-        <Head>
-            <link rel="stylesheet" href="/_next/static/style.css" />
-        </Head>
+    <div>       
         <header className="navbar">
             <div className="nav-wrap-left">
                 <a gaevent="imt/hd/cityBottom" href="//i.meituan.com/index/changecity" className="react">
@@ -28,6 +25,9 @@ const Header = () => (
                 </a>
             </div>
         </header>
+        <style jsx>
+            {`@import 'styles/header.scss';`}
+        </style>
     </div>
 )
 export default Header
