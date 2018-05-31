@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Head from 'next/head'
-
+import '../styles/category.scss'
 const Category = () => (
     <div id="category">        
         <dl className="list" id="daogou">
@@ -34,11 +34,11 @@ const Category = () => (
                 </a>
             </dd>
         </dl>
-        <style jsx>
+        {/* <style>
             {`
               @import 'styles/category.scss';
             `}
-        </style>
+        </style> */}
     </div>
 )
 export default Category

@@ -2,7 +2,7 @@
  * @Author: jianxi_lin 
  * @Date: 2018-05-24 16:49:22 
  * @Last Modified by: jianxi_lin
- * @Last Modified time: 2018-05-28 16:21:41
+ * @Last Modified time: 2018-05-31 10:35:11
  */
 import React from 'react'
 import { initStore } from '../redux/store'
@@ -42,7 +42,7 @@ class Home extends React.Component {
             return { __html: this.cows() }
         }.bind(this);
         return (
-            <Layout title={`图书商城`}>
+            <Layout title={`美团外卖`}>
                 <Header></Header>
                 <Banner></Banner>
                 <Nine></Nine>
