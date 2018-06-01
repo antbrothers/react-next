@@ -4,7 +4,7 @@ const compression = require('compression')
 const LURCache = require('lru-cache')
 //const apiArray = require('./api')
 
-const port = parseInt(process.env.PORT, 10) || 3005
+const port = parseInt(process.env.PORT, 10) || 3002
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
@@ -38,9 +38,9 @@ app.prepare().then(() => {
     server.get('*', (req, res) => {
         return handle(req, res)
     })
-    server.listen(3000, (err) => {
+    server.listen(3002, (err) => {
         if (err) throw err
-        console.log('> Ready on http://loacalhost: 3000')
+        console.log('> Ready on http://loacalhost: 3002')
     })
 }).catch((ex) => {
     console.error(ex.stack)

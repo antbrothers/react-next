@@ -2,7 +2,7 @@
  * @Author: jianxi_lin 
  * @Date: 2018-05-24 16:49:22 
  * @Last Modified by: jianxi_lin
- * @Last Modified time: 2018-05-31 10:35:11
+ * @Last Modified time: 2018-06-01 08:56:56
  */
 import React from 'react'
 import { initStore } from '../redux/store'
