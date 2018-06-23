@@ -11,7 +11,7 @@ const List = () => (
     <div>   
         {/* <Head>
             <link rel="stylesheet" href="/styles/list.scss" />              
-        </Head>     */}
+        </Head> */}
         <div id="list-main">
             <div id="guessLike" className="guess-like">
                 <dl className="list">

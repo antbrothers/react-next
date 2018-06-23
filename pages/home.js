@@ -44,12 +44,12 @@ class Home extends React.Component {
         return (
             <Layout title={`美团外卖`}>
                 <Header></Header>
-                <Banner></Banner>
+                {/* <Banner></Banner>
                 <Nine></Nine>
                 <div className="pad-gray"></div>
                 <Category></Category>
                 <div className="pad-gray"></div>
-                <List></List>
+                <List></List> */}
                 {/* <div className="btn" onClick={() => this.props.getRed()}>领取</div>
                 <table>
                     <tbody dangerouslySetInnerHTML={createMarkup()}>

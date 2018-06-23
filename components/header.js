@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Head from 'next/head'
-
+import '../styles/header.scss'
 const Header = () => (
     <div>       
         <header className="navbar">
@@ -25,9 +25,9 @@ const Header = () => (
                 </a>
             </div>
         </header>
-        <style jsx>
+        {/* <style jsx>
             {`@import 'styles/header.scss';`}
-        </style>
+        </style> */}
     </div>
 )
 export default Header
