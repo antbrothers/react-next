@@ -18,7 +18,7 @@ import fetch from "isomorphic-unfetch";
 
 class Home extends React.Component {
     // 异步服务端渲染数据
-    static async getInitialProps({ pathname, query, req, xhr }) {
+    static async getInitialProps({ pathname, query, req, xhr }) {      
         const res = await fetch('http://114.67.143.209:3002/api/getRed')
         const data = await res.json()
         console.log(`show data fetched . Count : ${data.data.hot.length}`)
