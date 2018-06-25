@@ -6,6 +6,7 @@
  */
 import React from 'react'
 import { initStore } from '../redux/store'
+// import Head from 'next/head'
 import withRedux from 'next-redux-wrapper'
 import Layout from "../layout/BasicLayout";
 import Banner from '../components/banner'
@@ -43,13 +44,14 @@ class Home extends React.Component {
         }.bind(this);
         return (
             <Layout title={`美团外卖`}>
+                {/* <Head><link rel="stylesheet" href="/_next/static/style.css" /></Head> */}
                 <Header></Header>
-                {/* <Banner></Banner>
+                <Banner></Banner>
                 <Nine></Nine>
                 <div className="pad-gray"></div>
                 <Category></Category>
                 <div className="pad-gray"></div>
-                <List></List> */}
+                <List></List>
                 {/* <div className="btn" onClick={() => this.props.getRed()}>领取</div>
                 <table>
                     <tbody dangerouslySetInnerHTML={createMarkup()}>
