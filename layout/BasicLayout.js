@@ -4,7 +4,7 @@ import flexible from '../utils/flexible'
 import "../styles/common.scss"
 export default class BasicLayout extends React.Component {
     componentDidMount() {
-        // flexible(window, document)
+        flexible(window, document)
     }
     render() {
         const { children, title = 'This is the defalt title' } = this.props
